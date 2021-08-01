@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Navbar, Nav, Container, NavDropdown, Button, Form, Modal} from 'react-bootstrap';
 import styled from 'styled-components';
 const Styles = styled.div `
     a, .navbar-brand, .navbar-nav .nav-link {
@@ -12,6 +12,13 @@ const Styles = styled.div `
 `
 
 export default function Navibar() {
+    
+    const [show, setShow] = useState(false)
+
+    const handleClose = () => setShow(false);
+
+    const handleShow = () => setShow(true);
+
     return (
         <>
         <Styles>
@@ -34,15 +41,36 @@ export default function Navibar() {
                             </NavDropdown>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#login">Log In</Nav.Link>
-                            <Nav.Link eventKey={2} href="#signout">
-                            Sign Out
-                            </Nav.Link>
+                        <Button variant='btn btn-dark' className='mr-2' onClick={handleShow}>Log In</Button>
+                        <Button variant='btn btn-dark'onClick={handleShow}>Sign Out</Button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
             </Styles>
+
+            <Modal show={show} onHide={handleClose}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Log in</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Form>
+                        <Form.Group controlId='fromBasicEmail'>
+                            <Form.Label>Email adress</Form.Label>
+                            <Form.Control type='email' palceholder='Enter email'/>
+                            <Form.Text className='text-muted'>We'll never share your email with anyone else.</Form.Text>
+                        </Form.Group>
+                        <Form.Group controlId='fromBasicPassword'>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Control type='password' palceholder='Enter password'/>
+                        </Form.Group>
+                        <Form.Group controlId='fromBasicCheckbox'>
+                            <Form.Label>Password</Form.Label>
+                            <Form.Check type='checkbox' label='remember me'/>
+                        </Form.Group>
+                    </Form>
+                </Modal.Body>
+            </Modal>
 
 
 
