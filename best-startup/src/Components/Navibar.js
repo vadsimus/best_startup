@@ -1,7 +1,6 @@
 
-import React from 'react'
-import { Navbar, Nav, Button, Container, NavDropdown} from 'react-bootstrap'
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
 import styled from 'styled-components';
 const Styles = styled.div `
     a, .navbar-brand, .navbar-nav .nav-link {
