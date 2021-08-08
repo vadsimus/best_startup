@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navibar from './Components/Navibar';
+import Footer from './Components/Footer';
 
 import { 
   BrowserRouter as Router, 
@@ -23,6 +24,7 @@ function App() {
       <Route exact path='/about' component={About} />
     </Switch>
     </Router>
+    <Footer />
     </>
   );
 }
