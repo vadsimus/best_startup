@@ -30,9 +30,8 @@ export const Home = () => (
                 </Col>
                 <Col>
                     <Card style={{width: '18rem'}}>
-                        
+                        <Card.Img variant='top' src={second}/>
                         <Card.Body>
-                            <Card.Img variant='top' src={second}/>  
                             <Card.Title>
                                 best_startup
                             </Card.Title>
@@ -45,9 +44,8 @@ export const Home = () => (
                 </Col>
                 <Col>
                     <Card style={{width: '18rem'}}>
-                        
+                        <Card.Img variant='top' src={third}/>
                         <Card.Body>
-                            <Card.Img variant='top' src={third}/>  
                             <Card.Title>
                                 best_startup
                             </Card.Title>
@@ -60,9 +58,8 @@ export const Home = () => (
                 </Col>
                 <Col>
                     <Card style={{width: '18rem'}}>
-                        
+                        <Card.Img variant='top' src={fourth}/>
                         <Card.Body>
-                            <Card.Img variant='top' src={fourth}/>  
                             <Card.Title>
                                 best_startup
                             </Card.Title>
