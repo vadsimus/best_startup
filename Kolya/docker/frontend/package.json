@@ -1,0 +1,28 @@
+{
+  "name": "habr-app-demo",
+  "version": "1.0.0",
+  "description": "This is an app demo for Habr article.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "node /app/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git@github.com/vadsimus/best_startup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vadsimus/best_startup/issues"
+  },
+  "homepage": "https://github.com/vadsimus/best_startup#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1"
+  }
+}
