@@ -9,7 +9,7 @@ class App extends Component {
 
     render() {
         const {pageType} = this.props;
-        console.log(pageType)
+        console.log(this.props)
         return (
             <div>
                 {pageType === "card" && <CardPage/>}

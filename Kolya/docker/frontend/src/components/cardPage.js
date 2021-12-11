@@ -16,9 +16,10 @@ class CardPage extends Component {
         // наше царь-действие здесь. Ещё одна причина - этот метод
         // вызывается также при рендеринге компонент в HTML функцией
         // renderToString, которую мы будем использовать для SSR.
-        console.log('2')
+        console.log(this)
+        console.log(this.props)
         this.props.dispatch(fetchCardIfNeeded())
-        console.log('3')
+        console.log(this.props)
     }
 
     render() {

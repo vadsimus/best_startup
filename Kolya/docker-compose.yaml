@@ -41,4 +41,4 @@ services:
      - mongo
      - redis
     volumes:
-     - .:/code
+     - ./docker:/code

@@ -9,7 +9,6 @@ export default function template(title) {
                 <title>${title}</title>
             </head>
             <body>
-            <h1>Hellossss</h1>
                 <div id="app"></div>
                 <script src="/dist/client.js"></script>
             </body>

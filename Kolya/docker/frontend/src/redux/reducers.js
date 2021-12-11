@@ -6,16 +6,17 @@ import {
 } from "./actions";
 
 export default function root(state = {}, action) {
+
     switch (action.type) {
-        case START_FETCHING_CARD:
+        case "START_FETCHING_CARD":
+            console.log('llll')
             return {
-                ...state,
                 page: {
                     ...state.page,
                     isFetching: true
                 }
             };
-        case FINISH_FETCHING_CARD:
+        case "FINISH_FETCHING_CARD":
             return {
                 ...state,
                 page: {

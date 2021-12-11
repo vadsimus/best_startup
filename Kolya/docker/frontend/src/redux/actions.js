@@ -16,12 +16,10 @@ function fetchCard() {
         // Сперва даём состоянию понять, что мы ждём карточку.
         // Наши компоненты после этого могут, например,
         // включить характерную анимацию загрузки.
-        console.log('fetchCard')
         dispatch(startFetchingCard());
         // Формируем запрос к API.
         // let url = apiPath() + "/card/" + getState().page.cardSlug;
         let url = "http://0.0.0.0:40001/api/v1" + "/card/" + getState().page.cardSlug;
-        console.log(url)
         // Фетчим, обрабатываем, даём состоянию понять, что
         // данные карточки уже доступны. Здесь, конечно, хорошо
         // бы добавить обработку ошибок.

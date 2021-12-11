@@ -1,8 +1,8 @@
 # docker/worker/Dockerfile
 
 FROM python:stretch
-COPY requirements.txt /tmp/
+COPY ../requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
-ADD . /code
-WORKDIR /code
-CMD python -m worker
+ADD . /docker
+WORKDIR /docker
+CMD python -m docker.worker

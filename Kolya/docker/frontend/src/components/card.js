@@ -8,12 +8,14 @@ class Card extends Component {
         document.title = this.props.name
     }
 
+
     render() {
         const {name, html} = this.props;
+        console.log(this.props)
         return (
             <div>
                 <h1>{name}</h1>
-                <div> dangerouslySetInnerHTML={{__html: html}} </div>
+                <div dangerouslySetInnerHTML={{__html: html}}/>
             </div>
         );
     }
