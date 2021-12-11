@@ -5,3 +5,4 @@ gunicorn
 pymongo
 redis
 rq
+mistune

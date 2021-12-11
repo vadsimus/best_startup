@@ -18,7 +18,7 @@ class HabrAppDemo(flask.Flask):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        flask_cors.CORS(self, resources={r"/*": {"origins": "*"}})
+        flask_cors.CORS(self)
 
         self.wiring = Wiring(env)
 
