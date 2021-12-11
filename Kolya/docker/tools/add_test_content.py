@@ -11,7 +11,7 @@ try:
 except CardNotFound:
     card = wiring.card_dao.create(Card(
         slug="helloworld",
-        name="Hel!!!!!!!!!lo, world!",
+        name="Hello, world!",
         markdown="""
 This is a hello-world page.
     """))
