@@ -21,7 +21,7 @@ function SearchButtonHandler() {
 
     return (
         <>
-        <h1>Page FOR Users</h1>
+        <h1>Enter Your github nick</h1>
         <nav class="navbar navbar-light bg-light">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>{setSearch(e.target.value)}}/>
         <button class="btn btn-outline-success my-2 my-sm-0" onClick={SearchButtonHandler}>Search</button>
