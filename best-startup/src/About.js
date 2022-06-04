@@ -1,6 +1,5 @@
 import React from 'react'
 import Jumbotron from './Components/Jumbodron'
-import AnimatedText from 'react-animated-text-content';
 
 export const About = () => (
     <>
