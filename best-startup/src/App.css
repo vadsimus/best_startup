@@ -36,3 +36,25 @@
     transform: rotate(360deg);
   }
 }
+
+.github-name {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: auto;
+}
+
+.char {
+  font-size: 30px;
+  animation: char 1s 1;
+}
+@keyframes char {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1
+  }
+}

@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
-import { Container, Row, Card, Table, Button } from 'react-bootstrap'
+import Jumbotron from './Components/Jumbodron'
+import GithubSerch from './Components/GithubSearch'
+import { Container, Styles, Card, Table, Button } from 'react-bootstrap'
+
 
 function Users() {
     const [ search, setSearch ] = useState(0)
@@ -8,21 +11,22 @@ function Users() {
     const [ visible, setVisible ] = useState(false)
 
 
-function SearchButtonHandler() {
-    fetch('https://api.github.com/users/' + search )
+function SearchButtonHandler(inputed_search) {
+    fetch('https://api.github.com/users/' + inputed_search )
     .then(response => response.json())
     .then(user => {
         setAvatar({
             'name': user.name,
             'avatar_url': user.avatar_url,
             'bio': user.bio,
-            'html_url': user.html_url
+            'html_url': user.html_url,
+            'location': user.location
         })
         setVisible(true)
     })
 
 
-    fetch('https://api.github.com/users/' + search + '/repos')
+    fetch('https://api.github.com/users/' + inputed_search + '/repos')
     .then(response => response.json())
     .then(repos => {
         let q = []
@@ -38,28 +42,25 @@ function SearchButtonHandler() {
 
     return (
         <>
-        <h1>Enter Your github nickname</h1>
-        <nav class="navbar navbar-light bg-light">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>{setSearch(e.target.value)}}/>
-            <button class="btn btn-outline-success my-2 my-sm-0" onClick={SearchButtonHandler}>Search</button>
-        </nav>
-    
 
+        {!visible && <Jumbotron/>}
+        <GithubSerch SearchButtonHandler={SearchButtonHandler}/>
 
     {visible && <div className='d-flex flex-row'>
-
-
         <Card style={{ width: '18rem' }} className='m-3'>
     <Card.Img variant="top" src={avatar.avatar_url} />
     <Card.Body>
         <Card.Title>{avatar.name}</Card.Title>
+        <Card.Text className='mb-0'>
+        {avatar.location}
+        </Card.Text>
         <Card.Text>
         {avatar.bio}
         </Card.Text>
         <Button variant="primary"><a href={avatar.html_url} class="text-white">View Page</a></Button>
     </Card.Body>
     </Card>
-    <Table striped bordered hover>
+    <Table striped bordered hover className='mt-3 me-3'>
     <thead>
     <tr>
       <th>#</th>
