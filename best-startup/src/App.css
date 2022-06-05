@@ -39,22 +39,30 @@
 
 .github-name {
   position: absolute;
-  top: 50%;
-  left: 30%;
+  top: 0px;
+  left: 5%;
   width: auto;
+  z-index: -10;
 }
 
 .char {
-  font-size: 30px;
+  font-size: 250px;
   animation: char 1s 1;
+  opacity: .1;
 }
 @keyframes char {
   from {
-    transform: rotate(0deg);
     opacity: 0;
+    transform: scale(4) translate3d(25px, 55px, 0px) ;
   }
   to {
-    transform: rotate(360deg);
-    opacity: 1
+    opacity: .1;
+    transform: translate3d(0px, 0px, 0px);
   }
+}
+.char:hover{
+  color: burlywood;
+  opacity: .2;
+  transform: scale(1.2);
+  transition: all 1s;
 }

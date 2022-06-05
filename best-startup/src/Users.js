@@ -22,6 +22,7 @@ function SearchButtonHandler(inputed_search) {
             'html_url': user.html_url,
             'location': user.location
         })
+        
         setVisible(true)
     })
 
@@ -29,13 +30,18 @@ function SearchButtonHandler(inputed_search) {
     fetch('https://api.github.com/users/' + inputed_search + '/repos')
     .then(response => response.json())
     .then(repos => {
+        if (repos.message != 'Not Found'){
         let q = []
         repos.forEach((elem) => {
             console.log(elem)
             q.push(elem)
             })
-        setOutput(JSON.stringify(q))
-        
+            
+            setOutput(JSON.stringify(q))
+        } else {
+            setOutput('[]')
+        }
+ 
         }
         )
     }
