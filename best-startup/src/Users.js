@@ -41,7 +41,6 @@ function SearchButtonHandler(inputed_search) {
         } else {
             setOutput('[]')
         }
- 
         }
         )
     }
