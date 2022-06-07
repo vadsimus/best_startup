@@ -50,6 +50,7 @@
   font-size: 250px;
   animation: char_a 1s 1;
   opacity: .1;
+  transition: all 1s ease-out;
 }
 @keyframes char_a {
   from {
@@ -65,5 +66,5 @@
   color: burlywood;
   opacity: .2;
   transform: scale(1.2);
-  transition: all 1s ease-out;
+  
 }
