@@ -42,15 +42,16 @@
   top: 0px;
   left: 5%;
   width: auto;
+  white-space: nowrap;
   z-index: -10;
 }
 
 .char {
   font-size: 250px;
-  animation: char 1s 1;
+  animation: char_a 1s 1;
   opacity: .1;
 }
-@keyframes char {
+@keyframes char_a {
   from {
     opacity: 0;
     transform: scale(4) translate3d(25px, 55px, 0px) ;
@@ -64,5 +65,5 @@
   color: burlywood;
   opacity: .2;
   transform: scale(1.2);
-  transition: all 1s;
+  transition: all 1s ease-out;
 }
