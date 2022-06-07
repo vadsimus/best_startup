@@ -12,9 +12,11 @@ function Users() {
 
 
 function SearchButtonHandler(inputed_search) {
+    if (inputed_search) {
     fetch('https://api.github.com/users/' + inputed_search )
     .then(response => response.json())
     .then(user => {
+        if (user.name) {
         setAvatar({
             'name': user.name,
             'avatar_url': user.avatar_url,
@@ -24,7 +26,11 @@ function SearchButtonHandler(inputed_search) {
         })
         
         setVisible(true)
-    })
+    } else {
+        setVisible(false)
+    }
+}
+    )
 
 
     fetch('https://api.github.com/users/' + inputed_search + '/repos')
@@ -33,7 +39,6 @@ function SearchButtonHandler(inputed_search) {
         if (repos.message != 'Not Found'){
         let q = []
         repos.forEach((elem) => {
-            console.log(elem)
             q.push(elem)
             })
             
@@ -43,7 +48,12 @@ function SearchButtonHandler(inputed_search) {
         }
         }
         )
+    } else {
+        setVisible(false)
     }
+} 
+    
+
 
     return (
         <>
@@ -97,10 +107,13 @@ function SearchButtonHandler(inputed_search) {
   </tbody>
     </Table>
 
-    </div> }
+    </div> 
+    }
+    
     </>
     )
 }
+
 
 
 export {Users}
