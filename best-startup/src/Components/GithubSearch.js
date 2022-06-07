@@ -31,20 +31,15 @@ function GithubSearch(props) {
                     ))
                 }
             </div>
-            <Container style={{paddingTop: '5rem', paddingBottom: '2rem'}}>
-            <div className="row g-3 align-items-center ">
-                <div className="col-auto">
-                    <input className="form-control m-3 col-auto" 
+            <div  style={{paddingTop: '7rem', paddingLeft: '5rem', width: '27rem'}}>
+                    <input className="form-control m-1 d-inline-block me-0" 
+                        style={{width: '14rem'}}
                         type="search" 
                         placeholder="Github nickname" 
                         aria-label="Search" 
                         onChange={(e)=>{setInputed(e.target.value)}}/>
-                </div>
-                <div className="col-auto">
-                    <button className="btn btn-outline-success m-3 col-auto" onClick={()=>{props.SearchButtonHandler(inputed)}}>Search</button>
-                </div>
+                    <button className="btn btn-outline-success m-3" onClick={()=>{props.SearchButtonHandler(inputed)}}>Search</button>
             </div>
-            </Container>
         </Jumbo>
     </Styles>
     </>
