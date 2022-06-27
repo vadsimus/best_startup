@@ -9,8 +9,9 @@ import {
 } from 'react-router-dom';
 
 import {Home} from './Home';
-import {Users} from './Users';
+// import {Users} from './Users';
 import {About} from './About';
+import {GithubUsers} from './GithubUsers';
 
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
     <Navibar />
     <Switch>
       <Route exact path='/' component={Home} />
-      <Route exact path='/users' component={Users} />
+      {/* <Route exact path='/users' component={Users} /> */}
+      <Route exact path='/githubUsers' component={GithubUsers} />
       <Route exact path='/about' component={About} />
     </Switch>
     </Router>

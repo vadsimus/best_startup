@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-animated-text-content": "^1.0.1",
+    "react-spring": "^9.4.5"
+  }
+}

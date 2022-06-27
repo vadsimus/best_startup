@@ -29,12 +29,13 @@ export default function Navibar() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="/">Home</Nav.Link>
-                            <Nav.Link href="/users">Users</Nav.Link>
+
+                            <Nav.Link href="/githubUsers">Github Users</Nav.Link>
                             <Nav.Link href="/about">About</Nav.Link>
 
                             <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="/">Home</NavDropdown.Item>
-                                <NavDropdown.Item href="/users">Users</NavDropdown.Item>
+                                <NavDropdown.Item href="/githubUsers">Github Users</NavDropdown.Item>
                                 <NavDropdown.Item href="/about">About</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="/about">Separated link about</NavDropdown.Item>

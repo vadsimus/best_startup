@@ -4,7 +4,7 @@ import GithubSerch from './Components/GithubSearch'
 import { Container, Styles, Card, Table, Button } from 'react-bootstrap'
 
 
-function Users() {
+function GithubUsers() {
     const [ search, setSearch ] = useState(0)
     const [ output, setOutput ] = useState('[]')
     const [ avatar, setAvatar ] = useState({})
@@ -116,4 +116,4 @@ function SearchButtonHandler(inputed_search) {
 
 
 
-export {Users}
+export {GithubUsers}
