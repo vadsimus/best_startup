@@ -16,14 +16,16 @@ function SearchButtonHandler(inputed_search) {
     fetch('https://api.github.com/users/' + inputed_search )
     .then(response => response.json())
     .then(user => {
-        if (user.name) {
+        
+        if (user.name || user.login) {
         setAvatar({
-            'name': user.name,
+            'name': user.name || user.login,
             'avatar_url': user.avatar_url,
             'bio': user.bio,
             'html_url': user.html_url,
             'location': user.location
         })
+        console.log(user)
         
         setVisible(true)
     } else {
