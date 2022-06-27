@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import Jumbotron from './Components/Jumbodron'
 import GithubSerch from './Components/GithubSearch'
-import { Container, Styles, Card, Table, Button } from 'react-bootstrap'
+import { Card, Table, Button } from 'react-bootstrap'
 
 
 function GithubUsers() {
-    const [ search, setSearch ] = useState(0)
     const [ output, setOutput ] = useState('[]')
     const [ avatar, setAvatar ] = useState({})
     const [ visible, setVisible ] = useState(false)
